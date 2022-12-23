@@ -1,0 +1,143 @@
+body {
+  font-family: "Chivo Mono", monospace;
+  background-color: #282C33;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+.margin__top {
+  margin-top: 100px;
+}
+
+.fixed__top {
+  position: fixed;
+  top: 0;
+  transform: translateX(80px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.color-pink {
+  color: #C778DD;
+}
+
+.main__link {
+  padding: 8px 26px;
+  border: 1px solid #C778DD;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.5s all ease-in-out;
+  box-shadow: 0 0 1px #C778DD;
+}
+.main__link:hover {
+  color: #fff;
+  background-color: rgba(199, 120, 221, 0.2509803922);
+  box-shadow: none;
+}
+
+.social__networks {
+  margin: auto 10px;
+  color: #ABB2BF;
+  transition: 0.3s all ease-in;
+}
+.social__networks:hover {
+  color: white;
+}
+
+.border__width {
+  border: 1px solid #ABB2BF;
+}
+
+.hero__content h1 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 2px;
+}
+.hero__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ABB2BF;
+}
+.hero__work {
+  background: #282C33;
+  border: 1px solid #ABB2BF;
+}
+.hero__square {
+  width: 20px;
+  height: 20px;
+  background: #C778DD;
+}
+
+.quote {
+  background: url(../images/Rectangle\ 26.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.quote__subtitle {
+  border: 1px solid white;
+  border-top: 0;
+  position: absolute;
+  right: 111px;
+  top: -7px;
+}
+.quote__title {
+  border: 1px solid white;
+}
+.quote__one {
+  position: absolute;
+  left: 150px;
+  top: -10px;
+}
+.quote__two {
+  position: absolute;
+  right: 180px;
+  bottom: -10px;
+}
+
+.project {
+  margin-top: 150px;
+  background: url(../images/Frame\ 28.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.project__item {
+  border: 1px solid #fff;
+}
+
+.skills__item {
+  width: 32%;
+}
+
+.about-me {
+  background: url(../images/Rectangle\ 25.png);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.contact {
+  background: url(../images/Frame\ 36.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+footer {
+  margin-top: 140px;
+}
+
+.copyright a {
+  transition: 0.3s all ease-in;
+  color: #6c757d;
+}
+.copyright a:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
