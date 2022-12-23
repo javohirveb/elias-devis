@@ -69,7 +69,8 @@ body {
     transition: .3s all ease-in;
 
     &:hover {
-        color: white;
+        color: vars.$main-color;
+        text-shadow: 0 0 2px vars.$main-color;
     }
 }
 
