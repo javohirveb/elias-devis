@@ -121,7 +121,6 @@
     }
 }
 
-
 .skills {
     &__img {
         display: none;
@@ -203,19 +202,11 @@
             }
         }
 
-        // text-align: right;
-
-        // &>div {
-        //     text-align: left;
-        //     padding: 1.5rem;
-
         .discord,
         .email {
             display: flex;
             align-items: center;
         }
-
-        // }
     }
 }
 

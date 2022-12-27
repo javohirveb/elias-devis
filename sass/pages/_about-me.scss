@@ -1,8 +1,6 @@
 @use "../abstract/mixins";
 @use "../abstract/variables" as vars;
 
-
-
 .about-me {
     &__skills {
         &-list {
@@ -52,6 +50,10 @@
         &-item>div {
             padding: .5rem;
         }
+
+        img {
+            display: none;
+        }
     }
 }
 
@@ -77,10 +79,15 @@
             }
 
         }
+
         &__facts {
             background: url(../../images/Frame\ 31.png);
             background-repeat: no-repeat;
             background-position: right bottom;
+
+            img {
+                display: inline-block;
+            }
         }
     }
 

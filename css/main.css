@@ -321,6 +321,9 @@
 .about-me__facts-item > div {
   padding: 0.5rem;
 }
+.about-me__facts img {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .about-me__hero {
@@ -340,6 +343,9 @@
     background: url(../../images/Frame\ 31.png);
     background-repeat: no-repeat;
     background-position: right bottom;
+  }
+  .about-me__facts img {
+    display: inline-block;
   }
 }
 *,
