@@ -1,0 +1,87 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+
+
+
+.about-me {
+    &__skills {
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            align-self: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+        }
+
+        &-item {
+            width: 48%;
+
+            h6 {
+                font-size: 20px;
+                margin: 1rem;
+                padding: 0;
+            }
+
+            p {
+                font-size: 16px;
+                margin: 1rem;
+                padding: 0;
+                color: vars.$secondary-color;
+            }
+        }
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__facts {
+        margin-top: 60px;
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-item>div {
+            padding: .5rem;
+        }
+    }
+}
+
+@include mixins.media-md {
+
+    .about-me {
+        &__hero {
+            background: url(../../images/Rectangle\ 26.png);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        &__skills {
+
+            &-item {
+                width: 16%;
+            }
+
+            &-bg1 {
+                background: url(../../images/Frame\ 28.png);
+                background-repeat: no-repeat;
+                background-position: left;
+            }
+
+        }
+        &__facts {
+            background: url(../../images/Frame\ 31.png);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+    }
+
+}

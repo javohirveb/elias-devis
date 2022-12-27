@@ -1,0 +1,344 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__content {
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 42px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #ABB2BF;
+    }
+
+    &__work {
+        background: #282C33;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__square {
+        width: 20px;
+        height: 20px;
+        background: vars.$main-color;
+        margin-right: 0.75rem;
+    }
+}
+
+.quote {
+    &__main {
+        position: relative;
+        text-align: center;
+
+        &+div {
+            position: relative;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        padding: 2rem;
+        display: inline-block;
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        padding: 1rem;
+        display: inline-block;
+        border-top: 0;
+        position: absolute;
+        right: 33px;
+        bottom: -60px;
+    }
+
+    &__one {
+        position: absolute;
+        left: 30px;
+        top: 12px;
+    }
+
+    &__two {
+        position: absolute;
+        right: 30px;
+        bottom: 5px;
+    }
+}
+
+.project {
+    margin-top: 150px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        a {
+            color: vars.$white;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3rem;
+        row-gap: 20px;
+    }
+
+    &__item {
+        width: 90%;
+
+        h5 {
+            margin: 1rem;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .main__link {
+            margin: 1rem;
+        }
+    }
+}
+
+
+.skills {
+    &__img {
+        display: none;
+    }
+
+    &__main {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        margin-top: 20px;
+    }
+
+    &__item {
+        width: 88%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        h6 {
+            font-size: 20px;
+            margin: 1rem;
+            padding: 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 1rem;
+            padding: 0;
+            color: vars.$secondary-color;
+        }
+
+        a {
+            margin: 1rem;
+        }
+    }
+}
+
+.about-me {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__link {
+        margin: 1rem;
+    }
+}
+
+.contact {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        &>div {
+            text-align: left;
+            padding: 1rem;
+            width: 100%;
+
+            .discord,
+            .email {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        // text-align: right;
+
+        // &>div {
+        //     text-align: left;
+        //     padding: 1.5rem;
+
+        .discord,
+        .email {
+            display: flex;
+            align-items: center;
+        }
+
+        // }
+    }
+}
+
+@include mixins.media-md {
+
+    .quote {
+        background: url(../images/Rectangle\ 26.png);
+        background-repeat: no-repeat;
+        background-position: right;
+
+        &__title {
+            font-size: 28px;
+            padding: 3rem;
+        }
+
+        &__subtitle {
+            font-size: 25px;
+            padding: 1.5rem;
+            right: 143px;
+            bottom: -75px;
+        }
+
+        &__one {
+            position: absolute;
+            left: 250px;
+            top: 18px;
+        }
+
+        &__two {
+            position: absolute;
+            right: 200px;
+            bottom: 16px;
+        }
+    }
+
+    .project {
+        background: url(../images/Frame\ 28.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        &__main {
+            flex-direction: row;
+        }
+
+        &__list {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: 32%;
+        }
+    }
+
+    .skills {
+        &__img {
+            display: inline-block;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &__item {
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+
+            h6 {
+                font-size: 20px;
+                margin: 1rem;
+                padding: 0;
+            }
+
+            p {
+                font-size: 16px;
+                margin: 1rem;
+                padding: 0;
+                color: vars.$secondary-color;
+            }
+        }
+    }
+
+    .about-me {
+        background: url(../images/Rectangle\ 25.png);
+        background-repeat: no-repeat;
+        background-position: left;
+
+        &__list {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+            img {
+                margin-left: 150px;
+            }
+        }
+    }
+
+    .contact {
+        background: url(../images/Frame\ 36.png);
+        background-repeat: no-repeat;
+        background-position: right;
+
+        &__list {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-left: 100px;
+
+            &>div {
+                text-align: left;
+                padding: 1rem;
+            }
+        }
+    }
+}

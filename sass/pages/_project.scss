@@ -1,0 +1,18 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as vars;
+
+
+@include mixins.media-md {
+
+    .complete-apps {
+        background: url(../../images/Rectangle\ 26.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    .small-projects {
+        background: url(../../images/Frame\ 28.png);
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+}

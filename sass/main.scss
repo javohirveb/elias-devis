@@ -1,12 +1,31 @@
 @use "abstract/variables" as vars;
+@use "abstract/mixins";
+@use "pages/home";
+@use "pages/project";
+@use "pages/about-me";
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Chivo Mono', monospace;
-    background-color: #282C33;
+    background-color: vars.$bg-main;
+    margin: 0;
+    padding: 0;
+    color: vars.$white;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1140px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -28,21 +47,64 @@ body {
     background: #505050;
 }
 
-.margin__top {
-    margin-top: 100px;
+hr {
+    padding: 0;
+    margin: 0;
+    background: vars.$secondary-color;
 }
 
 .fixed__top {
     position: fixed;
     top: 0;
     transform: translateX(80px);
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
 }
 
+.margin__top {
+    margin-top: 100px;
+}
+
 .color-pink {
     color: vars.$main-color;
+}
+
+.img__fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.border__width {
+    border: 1px solid vars.$secondary-color;
+}
+
+.fw__bold {
+    font-weight: bold;
+}
+
+.position__relative {
+    position: relative;
+}
+
+.main__heading {
+    font-size: 23px;
+    margin-right: 0.5rem;
+}
+
+.pink__line {
+    width: 50%;
+}
+
+.main__p {
+    padding: 0;
+    margin: 1rem;
+    color: vars.$secondary-color;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .main__link {
@@ -50,14 +112,15 @@ body {
     border: 1px solid vars.$main-color;
     font-weight: 500;
     font-size: 16px;
-    color: #fff;
+    color: vars.$white;
     letter-spacing: 1px;
     text-decoration: none;
     transition: .5s all ease-in-out;
     box-shadow: 0 0 1px vars.$main-color;
+    display: inline-block;
 
     &:hover {
-        color: #fff;
+        color: vars.$white;
         background-color: #c778dd40;
         box-shadow: none;
     }
@@ -65,7 +128,7 @@ body {
 
 .social__networks {
     margin: auto 10px;
-    color: #ABB2BF;
+    color: vars.$secondary-color;
     transition: .3s all ease-in;
 
     &:hover {
@@ -74,107 +137,50 @@ body {
     }
 }
 
-.border__width {
-    border: 1px solid #ABB2BF;
+
+.footer {
+    margin-top: 140px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 50px;
+    }
 }
 
-.hero {
-    &__content {
-        h1 {
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 42px;
-            letter-spacing: 2px;
+.copyright {
+    text-align: center;
+    margin: 30px 0;
+
+    a {
+        transition: .3s all ease-in;
+        color: vars.$secondary-color;
+
+        &:hover {
+            color: vars.$white;
         }
     }
 
-    &__text {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-        color: #ABB2BF;
-    }
-
-    &__work {
-        background: #282C33;
-        border: 1px solid #ABB2BF;
-    }
-
-    &__square {
-        width: 20px;
-        height: 20px;
-        background: vars.$main-color;
-    }
 }
 
-.quote {
-    background: url(../images/Rectangle\ 26.png);
-    background-repeat: no-repeat;
-    background-position: right;
-
-    &__subtitle {
-        border: 1px solid white;
-        border-top: 0;
-        position: absolute;
-        right: 111px;
-        top: -7px;
+@include mixins.media-md {
+    .fixed__top {
+        display: flex;
     }
 
-    &__title {
-        border: 1px solid white;
+    .main__heading {
+        font-size: 28px;
     }
 
-    &__one {
-        position: absolute;
-        left: 150px;
-        top: -10px;
+    .hero {
+        flex-direction: row;
     }
 
-    &__two {
-        position: absolute;
-        right: 180px;
-        bottom: -10px;
-    }
-}
-
-.project {
-    margin-top: 150px;
-    background: url(../images/Frame\ 28.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    &__item {
-        border: 1px solid #fff;
-    }
-}
-
-.skills {
-    &__item {
-        width: 32%;
-    }
-}
-
-.about-me {
-    background: url(../images/Rectangle\ 25.png);
-    background-repeat: no-repeat;
-    background-position: left;
-}
-
-.contact {
-    background: url(../images/Frame\ 36.png);
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-footer {
-    margin-top: 140px;
-}
-
-.copyright a {
-    transition: .3s all ease-in;
-    color: #6c757d;
-
-    &:hover {
-        color: white;
+    .footer {
+        &__main {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 }
