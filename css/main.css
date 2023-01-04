@@ -361,8 +361,8 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 ::-webkit-scrollbar {
@@ -517,12 +517,13 @@ hr {
   height: 100%;
   background: #282C33;
   z-index: 100;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .nav__full .close-btn {
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1.6rem;
+  top: 1.7rem;
+  transform: scale(1.15);
 }
 .nav__full .nav__list {
   display: flex;
