@@ -31,38 +31,57 @@
     <header>
 
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="../images/logo-img.svg" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto gap-lg-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html"><span class="color-pink">#</span>home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="project.html"><span class="color-pink">#</span>works</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/"><span class="color-pink">#</span>about-me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html"><span class="color-pink">#</span>contacts</a>
-                            </li>
-                        </ul>
+            <nav class="nav">
+                <a class="nav__brand" href="#"><img src="../images/logo-img.svg" alt=""></a>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html"><span class="color-pink">#</span>home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="project.html"><span class="color-pink">#</span>works</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link active" href="about-me.html"><span class="color-pink">#</span>about-me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contact.html"><span class="color-pink">#</span>contacts</a>
+                    </li>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>EN</option>
+                        <option value="1">Ru</option>
+                        <option value="2">UZ</option>
+                    </select>
+                </ul>
+                <a class="nav__bars" id="nav-bars" href="#"><i class="fa-solid fa-bars"></i></a>
+                <div class="nav__full hidden" id="nav-list">
+                    <a class="nav__brand" href="#"><img src="../images/logo-img.svg" alt=""></a>
+                    <a class="close-btn" id="close-btn" href="#"><i class="fa-solid fa-xmark"></i></a>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="../index.html"><span class="color-pink">#</span>home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="project.html"><span class="color-pink">#</span>works</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link active" href="about-me.html"><span class="color-pink">#</span>about-me</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="contact.html"><span class="color-pink">#</span>contacts</a>
+                        </li>
+                    </ul>
+                    <div class="social__networks-bottom">
+                        <a class="social__networks" href="https://github.com/javohirveb" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a class="social__networks" href="https://instagram.com/javohirveb" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a class="social__networks" href="https://youtube.com/@javohirveb" target="_blank"><i
+                                class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
-                <select
-                    class="form-select bg-transparent text-secondary border-0 w-auto fw-bold d-none d-md-inline-block"
-                    aria-label="Default select example">
-                    <option selected>EN</option>
-                    <option value="1">Ru</option>
-                    <option value="2">UZ</option>
-                </select>
             </nav>
+
+        
         </div>
 
     </header>
@@ -203,6 +222,9 @@
         </div>
     </footer>
 
+
+
+    <script src="../javascript/app.js"></script>
 </body>
 
 </html>

@@ -19,11 +19,10 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 25px;
-        color: #ABB2BF;
+        color: vars.$secondary-color;
     }
 
     &__work {
-        background: #282C33;
         padding: 0.5rem;
         display: flex;
         align-items: center;
@@ -200,12 +199,6 @@
                 display: flex;
                 align-items: center;
             }
-        }
-
-        .discord,
-        .email {
-            display: flex;
-            align-items: center;
         }
     }
 }

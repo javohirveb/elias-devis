@@ -16,7 +16,6 @@
   color: #ABB2BF;
 }
 .hero__work {
-  background: #282C33;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -160,11 +159,6 @@
 }
 .contact__wrapper > div .discord,
 .contact__wrapper > div .email {
-  display: flex;
-  align-items: center;
-}
-.contact__wrapper .discord,
-.contact__wrapper .email {
   display: flex;
   align-items: center;
 }
@@ -477,6 +471,77 @@ hr {
   color: #C778DD;
   text-shadow: 0 0 2px #C778DD;
 }
+.social__networks-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa-bars, .fa-xmark {
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.nav > .nav__list {
+  display: none;
+}
+.nav__list {
+  list-style: none;
+}
+.nav__link {
+  color: #ABB2BF;
+  text-decoration: none;
+  transition: 0.2s all ease-in;
+}
+.nav__link.active, .nav__link:hover {
+  color: #fff;
+}
+.nav__full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #282C33;
+  z-index: 100;
+  padding: 2rem;
+}
+.nav__full .close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.nav__full .nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-select {
+  background: #282C33;
+  color: #ABB2BF;
+  border: none;
+}
+.form-select option {
+  padding: 1rem;
+}
+.form-select:focus-visible {
+  outline: none;
+}
 
 .footer {
   margin-top: 140px;
@@ -503,6 +568,14 @@ hr {
 @media screen and (min-width: 768px) {
   .fixed__top {
     display: flex;
+  }
+  .nav > .nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav__bars {
+    display: none;
   }
   .main__heading {
     font-size: 28px;

@@ -135,6 +135,83 @@ hr {
         color: vars.$main-color;
         text-shadow: 0 0 2px vars.$main-color;
     }
+
+    &-bottom {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.fa-bars, .fa-xmark {
+    color: vars.$white;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    &>&__list {
+        display: none;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__link {
+        color: vars.$secondary-color;
+        text-decoration: none;
+        transition: .2s all ease-in;
+
+        &.active,
+        &:hover {
+            color: vars.$white;
+        }
+    }
+    &__full {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: vars.$bg-main;
+        z-index: 100;
+        padding: 2rem;
+        .close-btn {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+        }
+        .nav__list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.form-select {
+    background: vars.$bg-main;
+    color: vars.$secondary-color;
+    border: none;
+    option {
+        padding: 1rem;
+    }
+    &:focus-visible {
+        outline: none;
+    }
 }
 
 
@@ -167,6 +244,17 @@ hr {
 @include mixins.media-md {
     .fixed__top {
         display: flex;
+    }
+
+    .nav {
+        &>&__list {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        &__bars {
+            display: none;
+        }
     }
 
     .main__heading {
